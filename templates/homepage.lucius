@@ -1,0 +1,58 @@
+*
+/* h2##{aDomId} { */
+    /* color: #990 */
+/* } */
+
+.search-bar {
+    margin-top: 100px;
+    padding: 10px;
+    padding-right: 400px;
+    color: black;
+}
+.button {
+    background-color: black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+}
+
+li {
+    line-height: 2em;
+    font-size: 16px
+}
+
+/* ##{commentTextareaId} { */
+    /* width: 400px; */
+    /* height: 100px; */
+/* } */
+autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+.wrapper {
+    position: absolute !important;
+    top: 250px !important;
+}
+.ais-SearchBox-input {
+    /* position: relative; */
+    /* top: 200px; */
+    padding: 15px !important;
+    font-size: 20px !important;
+    
+}
+
+mark {
+    font-size: 20px !important; 
+}
+.ais-SearchBox-submit {
+    opacity: 0%;
+}
+.ais-Hits {
+    width: 95% !important;
+    position: absolute !important;
+    
+}
+body {
+    background-color: rgb(27, 28, 29) !important;
+}

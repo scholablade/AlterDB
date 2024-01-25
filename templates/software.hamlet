@@ -1,0 +1,23 @@
+<center>
+  <div .ui.container style="border-style: solid; padding: 100px;">
+    <div .row>
+       <h1> #{contextTitle}
+        $if mainImage /= "/static"
+         <img src=#{mainImage} .bruh>
+      <p> #{contextDescription}
+      <form action="http://localhost:3000/software/#{show fa}/add-alternatives">
+        <button type="submit"> Add alternative
+  <h3> Alternatives
+    $forall (title, description, filename) <- zip3 f (reverse b) filenames
+      <h1> #{title}
+        $if mainImage /= "/static"
+         <img src=#{filename} .bruh>
+      <p>  #{description}
+    
+      
+      <!-- $forall (title, description) <- zip titles (reverse descriptions) <\!-- reverse, since you get the data reversed -\-> -->
+      <!-- <h1> #{title} -->
+        <!-- $if mainImage /= "/static" -->
+         <!-- <img src=#{filename} .bruh> -->
+      <!-- <p>  #{description} -->
+      

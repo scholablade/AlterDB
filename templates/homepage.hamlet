@@ -1,0 +1,172 @@
+  <!-- <head> -->
+    <!-- <meta charset="utf-8" /> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@meilisearch/instant-meilisearch/templates/basic_search.css" /> -->
+  <!-- <body> -->
+    <!-- <div class="wrapper"> -->
+      <!-- <div id="searchbox" focus> -->
+      <!-- <div id="hits"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@meilisearch/instant-meilisearch/dist/instant-meilisearch.umd.min.js"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"> -->
+  <!-- <script> -->
+    
+   <!-- const { searchClient } = instantMeiliSearch ( -->
+   <!-- "#{searchRoute}", -->
+                    <!-- "55a55b144d6e3dbece3dd092913b57b6613086dd1d054ab79c51905bbeb26057", -->
+                    <!-- { -->
+                        <!-- placeholderSearch: false, -->
+                        <!-- hitsPerPage: 10, -->
+                    <!-- } -->
+                    <!-- ); -->
+   <!-- const search = instantsearch({ -->
+      <!-- indexName: "software", -->
+      <!-- searchClient, -->
+                <!-- initialUiState: { -->
+                    <!-- frontpage: { -->
+                        <!-- query: '' -->
+                    <!-- } -->
+        <!-- }}); -->
+     <!-- search.addWidgets([ -->
+        <!-- instantsearch.widgets.searchBox({ -->
+          <!-- container: "#searchbox" -->
+        <!-- }), -->
+        <!-- instantsearch.widgets.configure({ hitsPerPage: 8 }), -->
+        <!-- instantsearch.widgets.hits({ -->
+          <!-- container: "#hits", -->
+          <!-- templates: { -->
+          <!-- item: ` -->
+            <!-- <div> -->
+              <!-- <div class="hit-name"> -->
+                  <!-- {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}} -->
+          <!-- ` -->
+          <!-- } -->
+        <!-- }) -->
+      <!-- ]); -->
+      <!-- search.start(); -->
+
+            <!-- const { searchClient } = instantMeiliSearch( -->
+                    <!-- "http://localhost:7700/", -->
+                    <!-- "token", -->
+                    <!-- { -->
+                        <!-- placeholderSearch: false,  -->
+                        <!-- hitsPerPage: 10, -->
+                    <!-- } -->
+                    <!-- ) -->
+    
+            <!-- const search = instantsearch({ -->
+                <!-- indexName: "software", -->
+                <!-- searchClient, -->
+                <!-- initialUiState: { -->
+                    <!-- frontpage: { -->
+                        <!-- query: '' -->
+                    <!-- } -->
+                <!-- } -->
+            <!-- }); -->
+
+    <!-- const { searchClient } = instantsearch({ -->
+      <!-- indexName: "software", -->
+      <!-- searchClient: instantMeiliSearch( -->
+        <!-- "http://localhost:7700", -->
+         <!-- "Token", -->
+          <!-- { -->
+                        <!-- placeholderSearch: false,  -->
+                        <!-- hitsPerPage: 10, -->
+                    <!-- } -->
+                    <!-- )  -->
+      
+      <!-- }); -->
+      <!-- const search = instantsearch(() -->
+      <!-- server.start(); -->
+      <!-- search.addWidgets([ -->
+        <!-- instantsearch.widgets.searchBox({ -->
+          <!-- container: "#searchbox" -->
+        <!-- }), -->
+        <!-- instantsearch.widgets.configure({ hitsPerPage: 8 }), -->
+        <!-- instantsearch.widgets.hits({ -->
+          <!-- container: "#hits", -->
+          <!-- templates: { -->
+          <!-- item: ` -->
+            <!-- <div> -->
+              <!-- <div class="hit-name"> -->
+                  <!-- {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}} -->
+          <!-- ` -->
+          <!-- } -->
+        <!-- }) -->
+      <!-- ]); -->
+      <!-- search.start(); -->
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@meilisearch/instant-meilisearch/templates/basic_search.css" />
+<div .masthead>
+    <div .container>
+        <div .row>
+            <h1 .header>
+                Find your alternative.
+            &nbsp
+            <div class="wrapper">
+              <div id="searchbox" focus>
+              <div id="hits">
+            <script src="https://cdn.jsdelivr.net/npm/@meilisearch/instant-meilisearch/dist/instant-meilisearch.umd.min.js">
+            <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4">
+            <script>
+                const { searchClient } = instantMeiliSearch (
+                "#{searchRoute}", 
+                "#{key}",
+                  {
+                        placeholderSearch: false,
+                        hitsPerPage: 10,
+                    }
+                );
+                const search = instantsearch({
+              indexName: "software",
+                searchClient,
+                initialUiState: {
+                    frontpage: {
+                        query: ''
+                    }
+                    }});
+                  <!-- searchClient: instantMeiliSearch( -->
+                      <!-- "#{searchRoute}", -->
+                     <!-- "http://localhost:7700", -->
+                    <!-- "55a55b144d6e3dbece3dd092913b57b6613086dd1d054ab79c51905bbeb26057" -->
+                
+                <!-- }); -->
+                search.addWidgets([
+                  instantsearch.widgets.searchBox({
+                    container: "#searchbox"
+                    }),
+                    instantsearch.widgets.configure({ hitsPerPage: 1 }),
+                    instantsearch.widgets.hits({
+                       container: "#hits",
+                      templates: {
+                      item: `
+                      <a id="link">
+                        <div id="data" onclick="link();" value="Refresh">
+                          <div class="hit-name" id="entries">
+                            {{#helpers.highlight}}{ "attribute": "title"}{{/helpers.highlight}}
+                          <div class="hit-name" id="id" hidden>
+                            {{#helpers.highlight}}{ "attribute": "id"}{{/helpers.highlight}}
+                      `
+                      }
+                    })
+                  ]);
+                  search.start();
+            <script>
+              function link () {
+              id = document.getElementById("id")
+              data = document.getElementById("data")
+              linkt = document.getElementById("link")
+              number = id.innerHTML
+              linkt.setAttribute("href", "software/" + number)
+                }
+              <!-- if (document.getElementById("entries") != null) { -->
+              <!-- entry = document.getElementById("entries") -->
+              <!-- } -->
+              <!-- function showResults () { -->
+              <!-- hits = document.getElementById("hits") -->
+              <!-- hits.style.display = 'contents'; -->
+               <!-- } -->
+              <!-- document.querySelector("input").addEventListener("click", showResults) -->
+              
+              
+  

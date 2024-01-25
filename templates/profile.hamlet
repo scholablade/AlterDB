@@ -1,0 +1,10 @@
+<div .ui.container>
+
+    <h1>
+      Access granted!
+      <!-- You are signed it, you can also change your name here: "link",  <\!-- your name currently: #{userIdent user} -\-> -->
+    <!-- <p> -->
+      <!-- This page is protected and access is allowed only for authenticated users. -->
+
+    <!-- <p> -->
+      <!-- Your data is protected with us <strong><span class="username">#{userIdent user}</span></strong>! -->
