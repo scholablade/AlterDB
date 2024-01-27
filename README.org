@@ -1,0 +1,13 @@
+#+TITLE: CRUD Application in Haskell
+
+* What is it?
+This web-application is written in Haskell and uses the Yesod web framework, it's similar to https://alternativeto.net where users can put software and their alternatives and uses SQLite as it's database and Meilisearch as the search engine.
+* Setup guide
+To self-host this web-application, download Haskell and Stack, I recommend GHCup.
+** MeiliSearch
+Download MeiliSearch from their website and get the keys and put them in ~env.dhall~ in ~config~,  with the name ~meilisearchKey~.
+** Google Secrets
+In the application there is Auth specifically Google Auth so get Google secrets from their webapp and name them in ~env.dhall~ as ~googleId~ and ~googleSecret~ respectively.
+Contact me if you can't get it working following these steps.
+* License
+AGPL v3
